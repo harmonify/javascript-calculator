@@ -1,8 +1,8 @@
 interface StateInterface {
-  numberInput: number[];
-  operatorInput: string[];
-  numberOutput: number | null;
-  outputLabel: string;
+  evaluated: boolean,
+  formula: string,
+  previousValue: string,
+  value: string,
 }
 
 export default StateInterface;

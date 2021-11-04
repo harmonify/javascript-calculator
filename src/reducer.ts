@@ -21,7 +21,7 @@ const reducer : ReducerInterface = (state, action)  => {
       return {
         ...state,
       };
-    case ACTIONS.RESET:
+    case ACTIONS.RESET_STATE:
       return INITIAL_STATE;
     default:
       return state;
