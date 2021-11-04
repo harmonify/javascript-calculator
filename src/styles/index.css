@@ -17,3 +17,23 @@
       monospace;
   }
 }
+
+@layer components {
+  .container {
+    @apply flex flex-col items-center justify-center;
+  }
+}
+
+@layer utilities {
+  .min-h-12 {
+    min-height: 3rem;
+  }
+
+  .text-gradient-turqoise {
+    @apply text-transparent bg-clip-text bg-gradient-to-bl from-green-500 via-cyan-400 to-cyan-200;
+  }
+
+  .ring-hf {
+    @apply outline-none rounded hover:ring-1 hover:ring-white hover:ring-offset-2 focus:ring-1 focus:ring-white focus:ring-offset-2;
+  }
+}
