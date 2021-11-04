@@ -1,7 +1,11 @@
 import { ReactElement } from "react";
 
 interface CardInterface {
-  ({children, className, title} : {children: ReactElement, className?: string, title?: any | any[]}) : any;
+  (props : {
+    children: ReactElement,
+    className?: string,
+    title?: any | any[]
+  }) : ReactElement;
 }
 
 const Card : CardInterface = ({children, className, title}) => {

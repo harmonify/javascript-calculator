@@ -7,7 +7,7 @@ import { Calculator } from "./components/Calculator";
 
 const App = (): ReactElement => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen space-y-3 bg-gradient-to-tl from-indigo-300 to-purple-400 text-white">
+    <div className="flex flex-col items-center justify-center min-h-screen space-y-3 bg-gradient-to-tl from-indigo-300 to-purple-400 text-white select-none">
       <div className="flex items-center space-x-2 text-4xl font-mono font-semibold">
         <span>Javascript Calculator</span>
         {CalculatorIcon}

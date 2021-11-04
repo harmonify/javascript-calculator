@@ -19,6 +19,22 @@
 }
 
 @layer components {
+  .btn-ac {
+    @apply bg-red-700 hover:bg-red-600 focus:bg-red-600;
+  }
+  
+  .btn-equal {
+    @apply bg-purple-700 hover:bg-purple-600 focus:bg-purple-600;
+  }
+
+  .btn-number {
+    @apply bg-black hover:bg-gray-900 focus:bg-gray-900;
+  }
+
+  .btn-operator {
+    @apply bg-gray-700 hover:bg-gray-600 focus:bg-gray-600;
+  }
+
   .container {
     @apply flex flex-col items-center justify-center;
   }
@@ -27,10 +43,6 @@
 @layer utilities {
   .min-h-12 {
     min-height: 3rem;
-  }
-
-  .text-gradient-turqoise {
-    @apply text-transparent bg-clip-text bg-gradient-to-bl from-green-500 via-cyan-400 to-cyan-200;
   }
 
   .ring-hf {

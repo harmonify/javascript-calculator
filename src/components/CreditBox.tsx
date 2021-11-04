@@ -1,20 +1,24 @@
-interface CreditBoxProps {
-  icons: JSX.Element[];
-  link: string;
-  linkText: string;
+import { ReactElement } from "react";
+
+interface CreditBoxInterface {
+  (props: {
+    icons: JSX.Element[];
+    link: string;
+    linkText: string;
+  }) : ReactElement;
 }
 
-const CreditBox : React.FC<CreditBoxProps> = (props) => {
+const CreditBox : CreditBoxInterface = ({icons, link, linkText}) => {
   return (
     <div className="flex justify-center items-center space-x-1 text-white font-mono ">
       <span>Made with</span>
-      {props.icons.map((icon, index) => (<span key={index}>{icon}</span>) )}
+      {icons.map((icon, index) => (<span key={index}>{icon}</span>) )}
       <span>by</span>
       <a
-        href={props.link}
+        href={link}
         className="underline outline-none ring-hf"
       >
-        {props.linkText}
+        {linkText}
       </a>
     </div>
   );
