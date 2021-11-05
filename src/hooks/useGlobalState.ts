@@ -1,26 +1,22 @@
 import { GlobalContext } from '../Store';
 import { useContext } from 'react';
 import StateInterface from '../interfaces/StateInterface';
-import DispatchType from '../interfaces/DispatchType';
+import DispatcherInterface from '../interfaces/DispatcherInterface';
 
 interface useGlobalStateInterface {
-  () : [StateInterface, DispatchType];
+  () : [StateInterface, DispatcherInterface];
 }
 
 const useGlobalState : useGlobalStateInterface = () => {
   const { state, dispatch } = useContext(GlobalContext);
 
-  const multiDispatch : DispatchType = (actions) => {
-    if (Array.isArray(actions)) {
-      actions.forEach(action => {
-        dispatch(action);
-      });
-    } else {
-      dispatch(actions);
-    }
-  };
+  const dispatcher : DispatcherInterface = (...actions) => {
+    actions.forEach(action => {
+      dispatch(action);
+    });
+  }
 
-  return [state, multiDispatch];
+  return [state, dispatcher];
 };
 
 export default useGlobalState;

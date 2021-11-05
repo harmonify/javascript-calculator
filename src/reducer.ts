@@ -9,18 +9,26 @@ interface ReducerInterface {
 
 const reducer : ReducerInterface = (state, action)  => {
   switch (action.type) {
-    case ACTIONS.ADD_NUMBER:
+    case ACTIONS.UPDATE_CURRENT_VALUE:
       return {
         ...state,
+        currentValue: action.payload.currentValue,
       };
-    case ACTIONS.ADD_OPERATOR: 
+    case ACTIONS.UPDATE_PREVIOUS_VALUE:
       return {
         ...state,
-      };
-    case ACTIONS.CALCULATE:
+        previousValue: action.payload.previousValue,
+      }
+    case ACTIONS.UPDATE_EVALUATED:
       return {
         ...state,
-      };
+        evaluated: action.payload.evaluated,
+      }
+    case ACTIONS.UPDATE_FORMULA:
+      return {
+        ...state,
+        formula: action.payload.formula,
+      }
     case ACTIONS.RESET_STATE:
       return INITIAL_STATE;
     default:

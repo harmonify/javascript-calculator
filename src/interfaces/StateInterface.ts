@@ -2,7 +2,7 @@ interface StateInterface {
   evaluated: boolean,
   formula: string,
   previousValue: string,
-  value: string,
+  currentValue: string,
 }
 
 export default StateInterface;
