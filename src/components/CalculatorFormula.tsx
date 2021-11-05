@@ -9,10 +9,9 @@ interface CalculatorFormulaInterface {
 const CalculatorFormula : CalculatorFormulaInterface = ({value}) => {
   return (
     <div
-      id="display"
-      className="text-right font-semibold font-mono"
+      className="h-4 text-right font-semibold font-mono"
     >
-      &nbsp;{value}
+      {value}
     </div>
   );
 };

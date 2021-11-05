@@ -10,7 +10,7 @@ const CalculatorDisplay : CalculatorDisplayInterface = ({value}) => {
   return (
     <div
       id="display"
-      className="text-right text-4xl font-semibold font-mono"
+      className="h-10 text-right text-2xl font-bold font-mono"
     >
       {value}
     </div>

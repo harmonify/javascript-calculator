@@ -1,14 +1,14 @@
-import { ReactElement } from "react";
+import { MouseEventHandler, ReactElement } from "react";
 import { DivideIcon, EqualIcon, MinusIcon, MultiplyIcon, PlusIcon } from "../configs/ICONS";
 import { Button } from "./Button";
 
 interface CalculatorButtonsInterface {
   (props: {
-    handleDecimal: () => void;
-    handleEvaluate: () => void;
-    handleNumber: () => void;
-    handleOperator: () => void;
-    handleReset: () => void;
+    handleDecimal: MouseEventHandler<HTMLButtonElement>;
+    handleEvaluate: MouseEventHandler<HTMLButtonElement>;
+    handleNumber: MouseEventHandler<HTMLButtonElement>;
+    handleOperator: MouseEventHandler<HTMLButtonElement>;
+    handleReset: MouseEventHandler<HTMLButtonElement>;
   }) : ReactElement;
 }
 
@@ -42,7 +42,7 @@ const CalculatorButtons : CalculatorButtonsInterface = ({
           id="multiply"
           className="btn-operator"
           onClick={handleOperator}
-          value="*"
+          value="x"
         >
           {MultiplyIcon}
         </Button>

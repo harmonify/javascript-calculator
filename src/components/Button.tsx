@@ -1,11 +1,11 @@
-import { ReactElement } from "react";
+import { MouseEventHandler, ReactElement } from "react";
 
 interface ButtonInterface {
   (props: {
     children: any,
     className?: string,
     id?: string,
-    onClick?: () => void,
+    onClick?: MouseEventHandler<HTMLButtonElement>,
     value?: string,
   }) : ReactElement;
 }
