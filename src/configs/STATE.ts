@@ -1,10 +1,10 @@
 import StateInterface from '../interfaces/StateInterface';
 
 export const INITIAL_STATE : StateInterface = {
-  numberInput: [],
-  operatorInput: [],
-  numberOutput: null,
-  outputLabel: '',
+  evaluated: true,
+  formula: '',
+  previousValue: '0',
+  currentValue: '0',
 };
 
 export * as default from './STATE';

@@ -10,7 +10,7 @@ interface CardInterface {
 
 const Card : CardInterface = ({children, className, title}) => {
   return (
-    <div className={`card bg-opacity-60 bg-black border-white border rounded-xl px-6 py-4 ${className}`}>
+    <div className={`card bg-opacity-60 bg-black border-white border rounded-xl px-6 py-6 ${className}`}>
       <div className="card-header flex justify-center items-center space-x-1">
         {title && title.map((t : any, i : number) => (
           <span

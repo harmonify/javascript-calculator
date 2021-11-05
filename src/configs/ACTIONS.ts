@@ -1,6 +1,11 @@
 export const ADD_NUMBER = 'ADD_NUMBER';
 export const ADD_OPERATOR = 'ADD_OPERATOR';
+export const ADD_DECIMAL = 'ADD_DECIMAL';
 export const CALCULATE = 'CALCULATE';
-export const RESET = 'RESET';
+export const RESET_STATE =  'RESET_STATE';
+export const UPDATE_EVALUATED = 'UPDATE_EVALUATED';
+export const UPDATE_FORMULA = 'UPDATE_FORMULA';
+export const UPDATE_CURRENT_VALUE = 'UPDATE_CURRENT_VALUE';
+export const UPDATE_PREVIOUS_VALUE = 'UPDATE_PREVIOUS_VALUE';
 
 export * as default from './ACTIONS';
