@@ -1,8 +1,8 @@
-import { RESET_STATE } from "../configs/ACTIONS";
+import ACTIONS from "../configs/ACTIONS";
 import ActionCreatorInterface from "../interfaces/ActionCreatorInterface";
 
 const resetState : ActionCreatorInterface = () => ({
-  type: RESET_STATE,
+  type: ACTIONS.RESET_STATE,
 });
 
 export default resetState;

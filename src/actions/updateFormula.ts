@@ -1,9 +1,9 @@
-import { UPDATE_FORMULA } from "../configs/ACTIONS";
+import ACTIONS from "../configs/ACTIONS";
 import ActionCreatorInterface from "../interfaces/ActionCreatorInterface";
 
 const updateFormula : ActionCreatorInterface<string> = (value) => {
   return {
-    type: UPDATE_FORMULA,
+    type: ACTIONS.UPDATE_FORMULA,
     payload: {
       formula: value
     }
